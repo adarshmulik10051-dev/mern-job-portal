@@ -9,8 +9,8 @@
             backend/
                 └── models/
                     ├── user.model.js // store all info for student/recuriter like name eamil pass profile 
-                    ├── company.model.js// store company deatail 
-                    ├── job.model.js--> stores all job each company manged by recuriter
+                     ├── company.model.js// store company deatail 
+                   ├── job.model.js--> stores all job each company manged by recuriter
                     └── application.model.js -->store evry job appliction->
 2. new concept i learn :
   - Schema  : schema define structure of documnets ex user contain:name ,email ,pass, education

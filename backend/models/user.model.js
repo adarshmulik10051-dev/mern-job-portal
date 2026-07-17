@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
 
 const userSchema = new mongoose.Schema({
-    fullName: {
+    fullname: {
         type: String,
         required: true
     },
@@ -12,9 +12,9 @@ const userSchema = new mongoose.Schema({
     },
     phoneNumber: {
         type: Number,
-        required: true,
+        required: true
     },
-    passWord: {
+    password: {
         type: String,
         required: true
     },
@@ -25,15 +25,18 @@ const userSchema = new mongoose.Schema({
     },
     profile: {
         bio: { type: String },
-        skills: { type: String },
-        resume: { type: String },//URL to resume
-        resumeOrignalName: { type: String },
-        company: { type: mongoose.Schema.Types.ObjectId, ref: 'company' },
+        skills: [{ type: String }],
+        resume: { type: String },
+        resumeOriginalName: { type: String },
+        company: {
+            type: mongoose.Schema.Types.ObjectId,
+            ref: "Company"
+        },
         profilePhoto: {
             type: String,
             default: ""
         }
-    },
+    }
+}, { timestamps: true });
 
-}, { timeStamps: true });
-export const user = mongoose.model("user", userSchema);
+export const User = mongoose.model("User", userSchema);

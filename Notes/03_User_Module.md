@@ -17,15 +17,27 @@
                   └── isAuthenticated.js-->this middleware verify jwt token before allow acess to protect API'S
        - create  routes folder :
                 routes/
-                └── user.route.js coonect routs with controller function    
+                └── user.route.js coonect routs with controller function   
+                Connected all user APIs with their controller functions.
+                Imported the user routes inside `index.js` using `app.use()` so the APIs become accessible.
+       - tested all user APIs using postman :
+           and verified user registration successfully ,user data store in mongodb ,login genrated JWT tokens ,jwt store in cookies ,protected api works succesfully . 
         -💡 Key Concepts Learned:
             1. Controller:
               contain buisness logic of the application
-               ex- for user --> register, login.....
+               ex- for user --> - Register User
+                                - Login User
+                                - Logout User
+                                - Update Profile
 
              2.Middleware:
               run before controller ,
-              Its job is to verify whether the user is authenticated.
+              Its job is to verify whether the user is authenticated. or give access only authncitaed persons
+
+              3.JWT authenticaton:
+              - after a succesfully login 
+                  - create JWT tokens ,store in cookies parser , protected apis can verifie before exicute 
+
               If the token is valid → Continue.--If the token is invalid → Return Unauthorized 
 
              3.Routes:
@@ -54,6 +66,30 @@
                 Learned JWT Authentication.
                 Learned Password Hashing using bcrypt.
                 Connected Routes with Controllers.
+ 
 
 
+        5.flow :
+        # 🔄 User Authentication Flow
 
+                      Client
+                          ↓
+                      User Route
+                          ↓
+                      Register / Login API
+                          ↓
+                      Controller
+                          ↓
+                      MongoDB
+                          ↓
+                      JWT Generated
+                          ↓
+                      Token Stored in Cookie
+                          ↓
+                      Protected API Request
+                          ↓
+                      Middleware verifies JWT
+                          ↓
+                      Controller Executes
+                          ↓
+                      Response Sent  

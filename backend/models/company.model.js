@@ -20,9 +20,9 @@ const companySchema = new mongoose.Schema({
     },
     userId:{
         type:mongoose.Schema.Types.ObjectId,
-        ref:'user',
+        ref:'User',
         required:true
 
     }
-},{timeStamps=true});
-export const company = mongooes.model("company", companySchema);
+},{timestamps:true});
+export const Company = mongoose.model("Company", companySchema);
