@@ -20,7 +20,7 @@ router.route("/logout")
 
 
 router.route("/profile/update")
-.post(isAuthenticated, updateProfile);
+.post(isAuthenticated, singleUpload, updateProfile);
 
 
 
