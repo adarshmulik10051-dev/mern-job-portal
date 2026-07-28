@@ -276,3 +276,19 @@ Home
 # 🧠 Interview Summary
 
 In this phase, I built the main frontend UI of the Job Portal using reusable React components. I created the Home, Jobs, Browse, Profile, and Job Details pages along with reusable components such as Navbar, Job Card, Footer, Filter Card, and Update Profile Dialog. The initial focus was on creating the UI structure, while the actual business logic and API integration were implemented in later stages.
+
+
+
+-make cloudnery folder in utils 
+coludnery install kela 
+env file mde 
+3 thigs add kela 
+CLOUD_NAME=
+API_KEY=
+API_SECRET= 
+
+
+
+
+
+
