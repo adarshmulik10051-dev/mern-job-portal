@@ -23,6 +23,45 @@ app persiste banvaych ahhe mnje sarkh sarkh login karayla lagnar nhiii
 tya sathi friondend la npm install redux-persist kela 
 
 
+user work done
+admin/recurteer
+
+compnent mde 
+admin folder banvla
+Companis 
+create company 
+compny table 
+compny setup 
+company crete 
+file bavle 
+
+app.jsx store pats change kele 
+constant mde end point dila 
+redux mde company slice banvla 
+2 hooks banvle use get all companies 
+use get company by id 
+
+
+
+
+/./
+
+job.jsx banvli admin floder mde 
+adminjob.jsx
+adminjobtable
+filter chalu kel by comp name & role 
+
+admin made new job create sathi 
+PostJob.jsx banvli 
+sagla kela job post hot ahhet atta 
+
+get applicantpage banvla  kele sagle tya mde aplicant staus update 
+ acpet reject table mde sagla compy wise applicats ghetle 
+
+
+/./
+
+
 
 
 

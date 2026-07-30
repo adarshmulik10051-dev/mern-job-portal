@@ -5,7 +5,6 @@ import { Job } from "../models/job.model.js";
 
 export const postJob = async(req,res)=>{
     try{
-
         const {
             title,
             description,
@@ -18,9 +17,7 @@ export const postJob = async(req,res)=>{
             companyId
         } = req.body;
 
-
         const userId = req.id;
-
 
         if(
             !title ||
@@ -39,31 +36,18 @@ export const postJob = async(req,res)=>{
             });
         }
 
-
         const job = await Job.create({
-
             title,
-
             description,
-
             requirements:requirements.split(","),
-
             salary:Number(salary),
-
             location,
-
             jobType,
-
-            experienceLevel:experience,
-
+            experienceLevel:Number(experience),
             position,
-
             company:companyId,
-
             created_by:userId
         });
-
-
 
         return res.status(201).json({
             message:"New job created successfully.",
@@ -71,10 +55,12 @@ export const postJob = async(req,res)=>{
             success:true
         });
 
-
-
     }catch(error){
         console.log(error);
+        return res.status(500).json({
+            message:"Something went wrong.",
+            success:false
+        });
     }
 }
 
